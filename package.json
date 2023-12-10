@@ -1,5 +1,5 @@
 {
-  "name": "vba-new-file-generator",
+  "name": "vba-file-generator",
   "displayName": "VBA New File Generator",
   "description": "Adds the ability to create .cls and .bas files with basic boilerplate",
   "version": "0.0.1",
@@ -19,21 +19,21 @@
       }
     ],
     "menus": {
-			"explorer/context": [
-				{
-					"when": "editorIsOpen",
-					"command": "extension.newVbaFile",
-					"group": "aTopGroup"
-				}
-			],
+      "explorer/context": [
+        {
+          "when": "editorIsOpen",
+          "command": "extension.newVbaFile",
+          "group": "aTopGroup"
+        }
+      ],
       "editor/context": [
         {
-        "when": "!editorReadonly && isWindows",
-        "command": "extension.newVbaFile",
-        "group": "aTopGroup"
+          "when": "!editorReadonly && isWindows",
+          "command": "extension.newVbaFile",
+          "group": "aTopGroup"
         }
       ]
-		}
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -43,15 +43,19 @@
     "lint": "eslint src --ext ts",
     "test": "vscode-test"
   },
-    "devDependencies": {
-    "@types/vscode": "^1.85.0",
+  "devDependencies": {
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
+    "@types/vscode": "^1.85.0",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
-    "eslint": "^8.54.0",
-    "typescript": "^5.3.2",
     "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.8"
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^2.22.0",
+    "vsce": "^2.15.0"
   }
 }
