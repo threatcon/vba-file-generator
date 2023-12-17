@@ -24,7 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
             });
 
             if (fileExtension) {
-				const fullFileName =  folderPath +'\\' + fileName + '.' + fileExtension;
+				const fullFileName =  folderPath +'\\' + fileName + fileExtension;
 				console.log(fullFileName);
                 const fileContent = getFileContent(fileExtension, fileName);
 				if (fs.existsSync(fullFileName) ) {
