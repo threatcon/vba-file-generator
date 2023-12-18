@@ -32,16 +32,6 @@ export function activate(context: vscode.ExtensionContext) {
 					return;
 				}
                 
-                // const uri = vscode.Uri.file(fullFileName);
-                // const wsedit = new vscode.WorkspaceEdit();
-                // wsedit.createFile(uri,{contents: new TextEncoder().encode(fileContent)});
-                // let editDone = await vscode.workspace.applyEdit(wsedit);
-                // console.log(editDone);
-                // // wsedit.insert(uri, new vscode.Position(0, 0), fileContent);
-                // // let successs = await vscode.workspace.applyEdit(wsedit);
-                // // console.log(successs);
-                // //await vscode.workspace.fs.writeFile(uri, new TextEncoder().encode(fileContent));
-
 				fs.writeFileSync(fullFileName, fileContent);
               
                 let  bottomPosition;
