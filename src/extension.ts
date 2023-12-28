@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
                 let  bottomPosition;
                 
                 if (fileExtension === '.cls') {
-                bottomPosition = 14; 
+                bottomPosition = 11; 
                 } else {
                 bottomPosition = 3;
                 }            
@@ -67,22 +67,22 @@ function getFileContent(fileExtension: string, fileName: string): string {
 "Attribute VB_Creatable = False\r\n" +
 "Attribute VB_PredeclaredId = False\r\n" +
 "Attribute VB_Exposed = False\r\n" +
-"\r\n"+ 
-"Option Explicit\r\n"
+"Option Explicit\r\n" +
+"\r\n\r\n\r\n\r\n\r\n\r\n" + 
+"Private Sub Class_Initialize()\r\n" +
+"\r\n" +
+"End Sub\r\n" +
+"\r\n" +
+"Private Sub Class_Terminate()\r\n" +
+"\r\n" +
+"End Sub\r\n"
 ;
     } else if (fileExtension === '.bas') {
         return "Attribute VB_Name = \"" + fileName + "\"\r\n" +
-"\r\n" +
 "Option Explicit\r\n" ;
     }
 
     return '';
 }
 
-//const filePath = '/path/to/file.txt';
-//const fileContent = 'This is the content of the file.';
-
-//createFile(filePath, fileContent);
-
-// This method is called when your extension is deactivated
 export function deactivate() {}
